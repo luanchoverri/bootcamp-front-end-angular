@@ -1,50 +1,69 @@
-body,label,h2,s,input {
-    font-family:  'Open Sans', sans-serif;
-  }
-  
+
+  /* Estilos para la lista de tareas */
   .todo-list {
     width: 400px;
     margin: 0 auto;
   }
-  
+
+  /* Estilos para el encabezado de la lista de tareas */
   .todo-list-header {
     background-color: #f7f7f7;
     padding: 5px ;
     text-align: center;
   }
   
+  /* Estilos para el formulario de agregar ítems */
   .todo-add-item {
     display: flex;
     padding: 10px 0;
   }
 
+  /* Estilos para el campo de texto en el formulario de agregar ítems */
   .todo-add-item input {
     flex: 1;
     padding: 10px ;
     margin-right: 2px;
   }
 
+  /* Estilos para el botón en el formulario de agregar ítems */
   .todo-add-item button {
     padding: 10px 0px; 
     width: 80px; 
     height: 50px; 
     margin-left: 2px;
+    cursor: pointer;
   }
 
-
+  /* Estilos para cada ítem de la lista de tareas */
   .todo-item {
     border: 1px solid black;
     padding: 10px;
     margin: 10px 0;
+    display: flex;
+    align-items: center;
 
   }
-  
+
+  /* Estilos para el checkbox dentro de los ítems de la lista de tareas */
   .todo-item input[type="checkbox"] {
     vertical-align: auto;
-    margin-right:5px;
+    margin-right: 5px;
   }
 
+  /* Estilos para la etiqueta de texto dentro de los ítems de la lista de tareas */
   .todo-item label {
     text-align: left;
     margin-left:5px;
+  }
+
+  /* Estilos para el icono de eliminación */
+  .eliminar-icono  {
+    margin-left: auto;
+  }
+
+  /* Estilos para la imagen de la papelera */
+  .eliminar-icono img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
   }
