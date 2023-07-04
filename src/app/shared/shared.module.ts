@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DeleteButtonComponent } from './delete-button/delete-button.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DeleteButtonComponent
+  ],
   imports: [
     CommonModule
   ]

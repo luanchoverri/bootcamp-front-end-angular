@@ -1,0 +1,23 @@
+
+
+  /* Estilos para el formulario de agregar ítems */
+  add-task {
+    display: flex;
+    padding: 10px 0;
+  }
+  
+  /* Estilos para el campo de texto en el formulario de agregar ítems */
+  input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 2px;
+  }
+  
+  
+   button {
+    padding: 10px 0px;
+    width: 80px;
+    height: 50px;
+    margin-left: 2px;
+    cursor: pointer;
+  }
