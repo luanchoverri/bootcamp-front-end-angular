@@ -1,4 +1,4 @@
-<div class="task-list">
-    <app-add-task></app-add-task>
-    <app-task></app-task>
+<div class="todo-list">
+    <app-add-task (task) = "addTask($event)"></app-add-task>
+    <app-tasks [list] = "taskList"></app-tasks>
 </div>

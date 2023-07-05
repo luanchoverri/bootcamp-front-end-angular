@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent {
+  taskList:any[] = [];
+
+  addTask(newTask:string){
+    this.taskList.unshift({title: newTask});
+  }
 
 }
