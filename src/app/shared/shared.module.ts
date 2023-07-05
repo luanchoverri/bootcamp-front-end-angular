@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DeleteButtonComponent } from './delete-button/delete-button.component';
+import { OptionButtonComponent } from './option-button/option-button.component';
+
 
 
 
 @NgModule({
   declarations: [
-    DeleteButtonComponent
+
+    OptionButtonComponent
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [
+    OptionButtonComponent
+
+  ],
 })
 export class SharedModule { }

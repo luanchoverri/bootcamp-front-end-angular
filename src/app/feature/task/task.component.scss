@@ -1,0 +1,22 @@
+
+
+.task {
+    display: flex;
+    padding: 2px;
+    align-items: center;
+    margin-bottom: 8px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 16px;
+}
+
+
+.task label {
+  flex: auto;
+}
+
+
+
