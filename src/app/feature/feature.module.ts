@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { TaskComponent } from './task/task.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { SharedModule } from '../shared/shared.module';
-import { TasksComponent } from './tasks/tasks.component';
+
+import { TaskListComponent } from './task-list/task-list.component';
 
 
 
@@ -11,7 +12,7 @@ import { TasksComponent } from './tasks/tasks.component';
   declarations: [
     TaskComponent,
     AddTaskComponent,
-    TasksComponent
+    TaskListComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +21,7 @@ import { TasksComponent } from './tasks/tasks.component';
   exports: [
     TaskComponent,
     AddTaskComponent,
-    TasksComponent
+    TaskListComponent
   ]
 })
 export class FeatureModule { }
