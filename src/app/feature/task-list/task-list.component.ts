@@ -6,5 +6,7 @@ import { Component, Input} from '@angular/core';
   styleUrls: ['./task-list.component.scss']
 })
 export class TaskListComponent {
-  @Input() list:any[]=[];
+  @Input() taskList: string[] = [];
+
+
 }

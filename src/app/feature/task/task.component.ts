@@ -5,7 +5,8 @@ import { Component, Input , Output} from '@angular/core';
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.scss']
 })
+
 export class TaskComponent {
-    @Input() task:any;
-  
+  @Input() task:any;
+
 }

@@ -1,10 +1,16 @@
+<div class="task-item">
+    <input type="checkbox" />
+    <span class="text">
+         
+        <ng-content></ng-content>
+       
+    </span>
 
-<div class="task-item ">
-    <input type="checkbox" checked />
-    
-    
-    <app-option-button [image]="'assets/img/simple-share.png'" ></app-option-button>
-    <app-option-button [image]="'assets/img/simple-paste.png'" ></app-option-button>
-    <app-option-button [image]="'assets/img/papelera-simple.png'"  ></app-option-button>
 
+    <!-- Proyecta el contenido -->
+    <div id="options">
+        <app-option-button [image]="'assets/img/simple-share.png'" ></app-option-button>
+        <app-option-button [image]="'assets/img/simple-paste.png'" ></app-option-button>
+        <app-option-button [image]="'assets/img/papelera-simple.png'"  ></app-option-button>
+    </div>
 </div>

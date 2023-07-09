@@ -2,21 +2,32 @@
 
 .task-item {
     display: flex;
-    padding: px;
+    padding: 10px;
     align-items: center;
+
     margin-bottom: 8px;
     border: 1px solid black;
     border-radius: 2px;
+    background-color: aqua;
+
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      background-color: darkorange;
+    }
+
+    span {
+      flex: auto;
+      background-color: rgb(17, 255, 37);
+    }
+    
+
+    #options{
+      display: flex;
+      background-color: rgb(0, 60, 255);
+    }
+    
+    
 }
-
-.task-item  input[type="checkbox"] {
-  margin-right: 16px;
-}
-
-
-.task-item  label {
-  flex: auto;
-}
-
 
 

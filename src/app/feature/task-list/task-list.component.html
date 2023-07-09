@@ -1,5 +1,8 @@
 <ul>
-    <li *ngFor="let task of list; let i = index ">
-        <app-task [task]="task"></app-task>
+    <app-task> Hola </app-task>
+    <app-task> Hola </app-task>
+    <li *ngFor="let task of taskList; let i = index ">
+
+        <app-task [task]="task"> {{task}} </app-task>
     </li>
 </ul>

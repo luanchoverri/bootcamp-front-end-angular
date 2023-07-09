@@ -1,6 +1,13 @@
 <main>
-    <div class="todo-list">
-        <app-add-task (task) = "addTask($event)"></app-add-task>
-        <app-tasks [list] = "taskList"></app-tasks>
-    </div>
+  <div class="todo-list">
+    <section class="input-section">
+      <app-add-task (taskEvent)="addTask($event)"></app-add-task>
+    </section>
+
+    <hr />
+
+    <section class="list-section">
+      <app-task-list [taskList]="tasks"> </app-task-list>
+    </section>
+  </div>
 </main>

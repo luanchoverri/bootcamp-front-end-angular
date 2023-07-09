@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TaskComponent } from './task/task.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { SharedModule } from '../shared/shared.module';
-
 import { TaskListComponent } from './task-list/task-list.component';
 
 
