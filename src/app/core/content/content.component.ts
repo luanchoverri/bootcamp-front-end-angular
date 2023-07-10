@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class ContentComponent {
   tasks: any[] = []; // Arreglo para almacenar las tareas
 
-  addTask(newTask: string) {
+  
+  
+  addTask(newTask: string) { // luego el string pasa a ser un tipo tarea creando un modelo 
     if (newTask != "") {
-      this.tasks.unshift(newTask); // Agregar la tarea al arreglo
+      this.tasks.unshift({title: newTask, checked:false}); // Agregar la tarea al arreglo
     }
   }
 }

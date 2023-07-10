@@ -6,10 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./option-button.component.scss']
 })
 export class OptionButtonComponent {
-  @Input() image: string = "";
-  @Output() clicked: EventEmitter<void> = new EventEmitter<void>();
+  @Input() icon: string = "";
+  @Output() buttonEvent = new EventEmitter<boolean>();
 
-  handleClick(): void {
-    this.clicked.emit();
+  assetUrl = "/assets/png/"
+  executeAction() {
+    this.buttonEvent.emit(true);
   }
 }

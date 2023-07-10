@@ -1,16 +1,17 @@
 <div class="task-item">
-    <input type="checkbox" />
-    <span class="text">
+    <input type="checkbox"  (click)= "emitChangeOnCheckbox()">
+    <div class="text">
          
-        <ng-content></ng-content>
+        <ng-content></ng-content> <!-- Proyecta el contenido -->
        
-    </span>
+    </div>
 
 
-    <!-- Proyecta el contenido -->
+    
     <div id="options">
-        <app-option-button [image]="'assets/img/simple-share.png'" ></app-option-button>
-        <app-option-button [image]="'assets/img/simple-paste.png'" ></app-option-button>
-        <app-option-button [image]="'assets/img/papelera-simple.png'"  ></app-option-button>
+        <!-- <app-option-button [icon]= "copy" ></app-option-button>
+        <app-option-button [icon]= "share" ></app-option-button> -->
+        <app-option-button [icon]= "delete" (buttonEvent)= "emitDeleteTask()"></app-option-button>
+
     </div>
 </div>

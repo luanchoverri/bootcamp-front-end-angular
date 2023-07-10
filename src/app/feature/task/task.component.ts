@@ -1,4 +1,4 @@
-import { Component, Input , Output} from '@angular/core';
+import { Component, EventEmitter, Input , Output} from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -7,6 +7,34 @@ import { Component, Input , Output} from '@angular/core';
 })
 
 export class TaskComponent {
-  @Input() task:any;
+  @Input() task:any ; 
+  @Output() checkedTask = new EventEmitter<boolean>();
+  @Output() optDelete = new EventEmitter<void>();
+
+  share = 'share';
+  copy = 'copy';
+  delete = 'delete';
+
+ 
+
+  emitDeleteTask() {
+    this.optDelete.emit();
+    // Lógica para borrar la tarea
+  }
+
+  copyTask() {
+    // Lógica para copiar la tarea
+  }
+
+  shareTask() {
+    // Lógica para compartir la tarea
+  }
+  
+  emitChangeOnCheckbox(){
+    this.task.checked = !this.task.checked;
+    this.checkedTask.emit(this.task.checked);
+  }
+
+  
 
 }

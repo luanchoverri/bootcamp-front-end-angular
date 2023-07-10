@@ -11,6 +11,19 @@
 
     background-color: darkviolet;
     cursor: pointer;
+
+    .svg-container {
+      width: 16px; /* Ancho deseado */
+      height: 16px; /* Alto deseado */
+
+      .icon {
+        width: 10px; /* Para ocupar todo el ancho del contenedor */
+        height: 10px; /* Para ocupar todo el alto del contenedor */
+      }
+    }
+    
+   
+    
   }
   
   

@@ -11,12 +11,15 @@
     background-color: aqua;
 
 
-    input[type="checkbox"] {
+    input {
       margin-right: 10px;
       background-color: darkorange;
+      &:checked + .text {
+        text-decoration: line-through;
+      }
     }
 
-    span {
+    .text {
       flex: auto;
       background-color: rgb(17, 255, 37);
     }
