@@ -6,10 +6,10 @@ import { Component, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent {
-  @Output() taskEvent = new EventEmitter<string>();
+  @Output() createTaskEvent = new EventEmitter<string>();
 
   emitTask(task: string){
-    this.taskEvent.emit(task);
+    this.createTaskEvent.emit(task);
   }
 
 }

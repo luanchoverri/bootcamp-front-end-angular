@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input , Output} from '@angular/core';
+import { Component, EventEmitter, Input , OnChanges, Output, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-task',
@@ -15,7 +15,7 @@ export class TaskComponent {
   copy = 'copy';
   delete = 'delete';
 
- 
+
 
   emitDeleteTask() {
     this.optDelete.emit();
