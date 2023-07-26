@@ -1,58 +1,44 @@
-
+@import '../../styles/variables.scss';
 
 .task-item {
   
     display: flex;
-    padding: 0.5rem 0.5rem;
-    align-items: center;
-
+    flex-direction: row; 
+    justify-content: center;  // Alinea los elementos verticalmente en el centro
+    align-items: center;      // Alinea los elementos horizontalmente en el centro 
+    padding: 0.5rem 0.5rem;   // hijos separados del borde en 8px 
     margin-bottom: 0.5rem;   //no especifica
-    border: none;
-    border-radius: 0.125rem;
-    background-color: rgba(34, 34, 34, 0.1);
+    
+
+    border-radius: $border-radius;
+    background-color: $color-black-10;
 
 
-    .custom-checkbox {
-
-      justify-content: center;  // TODO re-ver
+    input[type="checkbox"] {
       width: 1.5rem;
       height: 1.5rem;
-      margin: 0 0.5rem 0 0;
-      margin-left: 0;
       margin-right: 0.5rem; // separado 8px del texto de  la tarea
-      
-      border-radius: 0;
-      border: 0.125rem solid black;
-      background-color: rgb(63, 6, 25);
-
+      border: 2px solid; // no funciona
       cursor: pointer;
 
       &:checked + .task-text {
-        
         text-decoration-line: line-through;
-
       }
     }
 
     .task-text {
       flex: 1;
+      white-space: nowrap;      // Evita el salto de linea
+      text-overflow: ellipsis;  //puntitos suspensivos
+      overflow: hidden;         // oculta el texto
       font-size: 1.5rem;
-      justify-content: center;
-      text-align: left;
-
     }
     
-
     .task-buttons{
       display: flex;
-      flex-direction: row;
-      align-items: center;
-    
-      display: auto;
-      // width: 30%;
-      // height: 0%;
-      padding: 0px;
-      background-color: rgb(251, 255, 15);
+      justify-content: flex-end;
+      gap: 0.25rem;             // TODO 8px es mucho, no corresponde con la imagen
+      margin-left: 0.5rem;
     }
     
     

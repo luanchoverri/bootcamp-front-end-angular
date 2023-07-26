@@ -10,6 +10,7 @@ export class AddTaskComponent {
 
   emitTask(task: string){
     this.createTaskEvent.emit(task);
+
   }
 
 }
