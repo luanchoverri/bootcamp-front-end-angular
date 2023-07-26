@@ -4,21 +4,12 @@
 main{
   background-color: $color-white;
 
-  .input-section{
-      
-    // TODO borrar esto es solo guia
-    // padding: 0.5rem;
-    // border: 0.5px dashed blue;
-    // border-radius: $border-radius;
-  }
-
-  .list-section{
-      
-
-    // padding: 0.5rem;
-    // border: 0.5px dashed blue;
-    // border-radius: $border-radius;
+  hr{
+  
+    border: 2px solid $color-black-10;
+    border-radius: $border-radius;
   }
 
 }
   
+
