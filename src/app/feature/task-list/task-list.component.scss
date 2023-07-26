@@ -1,16 +1,18 @@
 
 
 ul{
-    background-color: burlywood;
+    // background-color: burlywood;
+    // border: 1px solid purple;
+    list-style: none;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 0; // por defecto viene con uno lateral porq es una lista
+ 
 
 
-    li{
-        
-        background-color: fuchsia;
-        list-style: none;
-        
+    .li{
+        background-color: rgb(139, 241, 241);
+       
     }
 }

@@ -1,17 +1,24 @@
-.todo-list {
-    font-family: sans-serif;
-    padding: 0 30% 0 30%;
+@import '../../styles/variables.scss';
 
-    background-color: crimson;
 
-  
-  }
+main{
+  background-color: $color-white;
 
   .input-section{
-
-    background-color: blue;
+      
+    // TODO borrar esto es solo guia
+    // padding: 0.5rem;
+    // border: 0.5px dashed blue;
+    // border-radius: $border-radius;
   }
 
   .list-section{
-    background-color: deeppink;
+      
+
+    // padding: 0.5rem;
+    // border: 0.5px dashed blue;
+    // border-radius: $border-radius;
   }
+
+}
+  

@@ -1,7 +1,17 @@
 <ul>
-    
+    <app-task 
+    [task] = " " 
+    (checkedTask) = "checkedTask(1, $event)" 
+    (optDelete) = "deleteTask(1)" > Hola </app-task>
+   
+    <app-task 
+    [task] = " " 
+    (checkedTask) = "checkedTask(2, $event)" 
+    (optDelete) = "deleteTask(2)" > Chau </app-task>
+   
+   
     <li *ngFor="let task of taskList; let i = index ">
-
+  
         <app-task 
             [task] = "task" 
             (checkedTask) = "checkedTask(i, $event)" 

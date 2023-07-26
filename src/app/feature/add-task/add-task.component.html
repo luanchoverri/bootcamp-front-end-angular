@@ -1,6 +1,6 @@
 <form  class="add-task" (submit)="$event.preventDefault();">
-   
-    <input #new type="text" placeholder="Agrega una nueva tarea" />
-    <button type="submit"  (click)  = "emitTask(new.value)" >Add</button>
- 
+   <div class="input-with-button">
+        <input #new type="text" placeholder="Add a new task here" />
+        <button type="submit" (click)= "emitTask(new.value)" class="text-button" >✔</button>
+    </div>
 </form>
