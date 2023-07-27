@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/theme.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  isDarkTheme = false;
+
+  constructor(private themeService: ThemeService) {}
+
+  ngOnInit(): void {
+    this.isDarkTheme = this.themeService.getDarkTheme();
+  }
 
 }

@@ -1,0 +1,67 @@
+
+$color-white: #FFFFFF;                       // $color-white
+$color-white-50: rgba(255, 255, 255, 0.5);   // $color-white con 50% de opacidad
+$color-white-20: rgba(255, 255, 255, 0.2);   // $color-white con 20% de opacidad
+
+$color-black: #000000;                      // $color-black
+$color-black-50: rgba(34, 34, 34, 0.5);     // $color-black con 50% de opacidad
+$color-black-10: rgba(34, 34, 34, 0.1);     // $color-black con 20% de opacidad
+
+
+:root {
+    background-color: $color-white;
+    color: $color-black;
+    
+    hr{
+        border: 2px solid $color-black-10;
+    }
+
+    input{
+        color: $color-black;
+    }
+
+    button{
+        border: 1px solid $color-black;
+        filter: invert(0);
+    }
+
+    .add-task{
+        background-color: $color-black-10;
+    }
+
+    .task-item{
+        background-color: $color-black-10;
+        color: $color-black; 
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: $color-black;
+        color: $color-white;
+        
+        hr{
+            border: 2px solid $color-white-20;
+        }
+
+        input{
+            color: $color-white;
+        }
+
+        button{
+            filter: invert(1);
+        }
+
+        .add-task{
+            background-color: $color-white-20;
+        
+        }
+        
+
+        .task-item{
+            background-color: $color-white-20;
+            color: $color-white; 
+        }
+    }
+}

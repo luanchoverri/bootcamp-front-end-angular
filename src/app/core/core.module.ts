@@ -13,7 +13,7 @@ import { FeatureModule } from '../feature/feature.module';
   ],
   imports: [
     CommonModule, 
-    FeatureModule
+    FeatureModule,
   ],
   exports: [
     HeaderComponent,

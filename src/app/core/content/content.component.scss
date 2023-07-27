@@ -1,15 +1,8 @@
 @import '../../styles/variables.scss';
 
 
-main{
-  background-color: $color-white;
 
-  hr{
-  
-    border: 2px solid $color-black-10;
-    border-radius: $border-radius;
-  }
-
+hr{
+  border-radius: $border-radius;
 }
-  
 

@@ -9,7 +9,7 @@
   margin-bottom: 0.5rem; //no especifica
 
   border-radius: $border-radius;
-  background-color: $color-black-10;
+ // background-color: $color-black-10;
 
   input[type="checkbox"] {
     width: 1.5rem;
@@ -17,7 +17,7 @@
     margin-right: 0.5rem; // separado 8px del texto de  la tarea
     border: 2px solid; // TODO no funciona
     cursor: pointer;
-
+    
     &:checked + .task-text {
       text-decoration-line: line-through;
     }

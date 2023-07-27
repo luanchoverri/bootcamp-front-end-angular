@@ -1,19 +1,16 @@
 @import "../../styles/variables.scss";
-@import "../../styles/styles.scss";
+
 
 .add-task {
   //Los elementos que lo componen se separan 8px desde los bordes y 8px entre ellos.
-
-  .input-with-button {
-    display: flex;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
-
-    background-color: $color-black-10;
-    box-sizing: border-box;
-    border-radius: $border-radius;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+   
 
     //  Ocupa todo el ancho del componente menos el ancho del botón y un margen de 8px. Su texto debe ser Roboto, 24px.
     input {
@@ -25,6 +22,9 @@
       outline: none;
       font-size: 1.5rem;
       font-family: "Roboto", sans-serif; // TODO cambiar luego
+      overflow: hidden;
+      text-overflow: ellipsis;
+    
       background-color: transparent;
     }
 
@@ -38,5 +38,5 @@
       background-color: transparent;
       cursor: pointer;
     }
-  }
+  
 }

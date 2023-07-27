@@ -1,3 +1,5 @@
+@import '../styles/themes.scss';
+
 @mixin flex($align: initial, $justify: initial, $direction: initial) {
     display: flex;
     align-items: $align;

@@ -1,6 +1,6 @@
 <form  class="add-task" (submit)="$event.preventDefault();">
-   <div class="input-with-button">
+   <!-- <div class="input-with-button"> -->
         <input #new type="text" placeholder="Add a new task here" />
         <button type="submit" (click)= "emitTask(new.value)" class="text-button" >✔</button>
-    </div>
+    <!-- </div> -->
 </form>
