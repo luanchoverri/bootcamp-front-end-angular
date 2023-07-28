@@ -11,11 +11,10 @@ export class TaskComponent {
   @Output() checkedTask = new EventEmitter<boolean>();
   @Output() optDelete = new EventEmitter<void>();
 
-  share = 'share';
-  copy = 'copy';
-  delete = 'delete';
-
-
+  share = 'icons8-compartir-24';
+  copy = 'copy' ;
+  delete = 'icons8-basura-24';
+  copy2 = 'copy2' ;
 
   emitDeleteTask() {
     this.optDelete.emit();

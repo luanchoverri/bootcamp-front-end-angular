@@ -1,14 +1,15 @@
 <div class="task-item">
     <input type="checkbox"  class="custom-checkbox" (click)= "emitChangeOnCheckbox()">
     <div class="task-text">
-         
-        <ng-content></ng-content> <!-- Proyecta el contenido -->
-       
+        <ng-content></ng-content> <!-- proyecta el contenido -->
     </div>
     <div class="task-buttons">
-        <app-option-button [icon]= "copy" ></app-option-button>
-        <app-option-button [icon]= "share" ></app-option-button> 
-        <app-option-button [icon]= "delete" (buttonEvent)= "emitDeleteTask()"></app-option-button>
-
+        <app-icon-button [icon]= "copy" ></app-icon-button>
+        <app-icon-button [icon]= "share" ></app-icon-button> 
+        <app-icon-button [icon]= "delete" (buttonEvent)= "emitDeleteTask()"  ></app-icon-button>
+      
+        <!-- botones icon text -->
+        <!-- <app-text-button text="Text"></app-text-button>
+        <app-icon-text-button [icon]= "copy2" text="Text"></app-icon-text-button> -->
     </div>
 </div>

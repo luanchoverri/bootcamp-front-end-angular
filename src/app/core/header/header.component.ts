@@ -7,7 +7,13 @@ import { ThemeService } from 'src/app/theme.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+
+  expand = 'icons8-pantalla-completa-24';
+
+
   isDarkTheme = false;
+
 
   constructor(private themeService: ThemeService) {}
 

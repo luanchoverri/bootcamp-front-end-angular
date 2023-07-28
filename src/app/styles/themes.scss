@@ -19,9 +19,14 @@ $color-black-10: rgba(34, 34, 34, 0.1);     // $color-black con 20% de opacidad
     input{
         color: $color-black;
     }
+    
+    .custom-checkbox{
+        border: 2px solid $color-black;
+        filter: invert(0);
+    }
+
 
     button{
-        border: 1px solid $color-black;
         filter: invert(0);
     }
 
@@ -47,6 +52,10 @@ $color-black-10: rgba(34, 34, 34, 0.1);     // $color-black con 20% de opacidad
 
         input{
             color: $color-white;
+        }
+
+        .custom-checkbox{
+            filter: invert(1);
         }
 
         button{
