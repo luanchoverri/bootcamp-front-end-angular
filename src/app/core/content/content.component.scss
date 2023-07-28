@@ -1,8 +1,6 @@
-@import '../../styles/variables.scss';
-
-
-
-hr{
-  border-radius: $border-radius;
+.add-section{
+  backdrop-filter: blur(10px) ;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 1;
 }
-

@@ -9,6 +9,6 @@ export class IconTextButtonComponent {
   @Input() icon: String = '';
   @Input() text: String = '';
 
-  assetUrl = "/assets/png/"
+  path = "/assets/svg/"
 
 }

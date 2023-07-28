@@ -9,7 +9,7 @@ export class IconButtonComponent {
   @Input() icon: string = "";
   @Output() buttonEvent = new EventEmitter<boolean>();
 
-  assetUrl = "/assets/png/"
+  path = "/assets/svg/"
   executeAction() {
     this.buttonEvent.emit(true);
   }

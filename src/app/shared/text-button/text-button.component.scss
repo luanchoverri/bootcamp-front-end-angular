@@ -1,17 +1,7 @@
 
-@import '../../styles/variables.scss';
+@import '../../styles/styleUtils.scss';
 .text-button{
-
-    width: auto;
-    height: 3rem;
-    border: 2px solid;
+    @include button-style(auto);
     padding: 0 1rem;
-    font-size: 1.5rem;
     text-align: center;
-    border: $border-size solid ;
-    border-radius: $border-radius;
-    box-sizing: border-box;
-    background-color: transparent;
-    cursor: pointer;
-    
 }

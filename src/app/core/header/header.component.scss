@@ -1,20 +1,14 @@
-
-
+@import '../../styles/styleUtils.scss';
 
   header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
+    @include center-flexbox;
+    margin: 0.5rem 0;
     text-align: left;
     
     h1 {
       flex: 1;
-      font-size: 36px;
-     //margin-left: 0 auto;
     }
-
-   
+    
   }
   
 

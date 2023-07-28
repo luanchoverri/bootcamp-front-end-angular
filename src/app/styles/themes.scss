@@ -1,76 +1,74 @@
 
-$color-white: #FFFFFF;                       // $color-white
-$color-white-50: rgba(255, 255, 255, 0.5);   // $color-white con 50% de opacidad
-$color-white-20: rgba(255, 255, 255, 0.2);   // $color-white con 20% de opacidad
+$white: #FFFFFF;                       // $color-white
+$white-50: rgba(255, 255, 255, 0.5);   // $color-white con 50% de opacidad
+$white-20: rgba(255, 255, 255, 0.2);   // $color-white con 20% de opacidad
 
-$color-black: #000000;                      // $color-black
-$color-black-50: rgba(34, 34, 34, 0.5);     // $color-black con 50% de opacidad
-$color-black-10: rgba(34, 34, 34, 0.1);     // $color-black con 20% de opacidad
+$black: #000000;                      // $color-black
+$black-50: rgba(34, 34, 34, 0.5);     // $color-black con 50% de opacidad
+$black-10: rgba(34, 34, 34, 0.1);     // $color-black con 20% de opacidad
 
-
-:root {
-    background-color: $color-white;
-    color: $color-black;
+:root{
+   
+    background-color: $white;
+    color: $black;
     
-    hr{
-        border: 2px solid $color-black-10;
-    }
-
-    input{
-        color: $color-black;
-    }
-    
-    .custom-checkbox{
-        border: 2px solid $color-black;
-        filter: invert(0);
-    }
-
-
     button{
         filter: invert(0);
     }
 
+    hr{
+        border: 2px solid $black-10;
+    }
+
+    input{
+        color: $black;
+    }
+    
     .add-task{
-        background-color: $color-black-10;
+        background-color: $black-10;
+    }
+
+    .custom-checkbox{
+        filter: invert(0);
     }
 
     .task-item{
-        background-color: $color-black-10;
-        color: $color-black; 
+        background-color: $black-10;
+        color: $black; 
     }
-}
 
+
+}
 
 @media (prefers-color-scheme: dark) {
     :root {
-        background-color: $color-black;
-        color: $color-white;
         
+        background-color: $black;
+        color: $white;
+        
+        button{
+            filter: invert(1);
+        }
+
         hr{
-            border: 2px solid $color-white-20;
+            border: 2px solid $white-20;
         }
 
         input{
-            color: $color-white;
+            color: $white;
+        }
+
+        .add-task{
+            background-color: $white-20;
         }
 
         .custom-checkbox{
             filter: invert(1);
         }
 
-        button{
-            filter: invert(1);
-        }
-
-        .add-task{
-            background-color: $color-white-20;
-        
-        }
-        
-
         .task-item{
-            background-color: $color-white-20;
-            color: $color-white; 
+            background-color: $white-20;
+            color: $white; 
         }
     }
 }

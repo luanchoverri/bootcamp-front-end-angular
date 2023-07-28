@@ -1,17 +1,8 @@
-@import '../../styles/variables.scss';
+@import '../../styles/styleUtils.scss';
 
 .icon-text-button{
-    display: flex;
+    @include center-flexbox;
+    @include button-style(auto);
     gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
     padding: 0 1rem;
-    width: auto;
-    height: 3rem;
-    box-sizing: border-box;
-    border: $border-size solid;
-    border-radius: $border-radius;
-    font-size: 1.5rem;
-    background-color: transparent;
-    cursor: pointer;
 }

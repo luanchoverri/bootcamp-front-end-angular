@@ -1,6 +1,6 @@
 <form  class="add-task" (submit)="$event.preventDefault();">
-   <!-- <div class="input-with-button"> -->
+ 
         <input #new type="text" placeholder="Add a new task here" />
         <app-icon-button  class="icon-button" [icon]="accept" (buttonEvent)="emitTask(new.value)"   ></app-icon-button>
-        <!-- </div> -->
+
 </form>

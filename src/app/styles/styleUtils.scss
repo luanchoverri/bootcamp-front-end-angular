@@ -1,0 +1,37 @@
+//fonts
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-weight-normal: 400;
+$font-size-base: 1.5rem;   //24px
+$font-size-large: 2.25rem; //36px
+
+//grid
+$grid-size: 0.5rem; // 8px div 16 px = 0.5
+
+//borders
+$border-size: 0.0625rem;  // borde 1 por defecto
+$border-radius: 0.25rem; // 4 pixeles borde radio por defecto
+
+//mixins
+
+@mixin center-flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+@mixin button-style ($width){
+  height: 3rem;
+  width: $width;
+  border: $border-size solid;
+  border-radius: $border-radius;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}

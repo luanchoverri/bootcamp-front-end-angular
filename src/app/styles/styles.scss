@@ -1,9 +1,0 @@
-@import '../styles/themes.scss';
-
-@mixin flex($align: initial, $justify: initial, $direction: initial) {
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
-}
-

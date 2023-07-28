@@ -1,7 +1,6 @@
 <main>
-  
-  <div class="todo-list">
-    <section class="input-section">
+  <div class="todo-list-content">
+    <section class="add-section">
       <app-add-task (createTaskEvent)="addTask($event)"></app-add-task>
     </section>
 
@@ -11,5 +10,4 @@
       <app-task-list [taskList]="tasks"> </app-task-list>
     </section>
   </div>
-
 </main>

@@ -1,24 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { ThemeService } from 'src/app/theme.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
 
-  expand = 'icons8-pantalla-completa-24';
-
-
-  isDarkTheme = false;
-
-
-  constructor(private themeService: ThemeService) {}
-
-  ngOnInit(): void {
-    this.isDarkTheme = this.themeService.getDarkTheme();
-  }
+  expand = 'icon-fullscreen';
 
 }
