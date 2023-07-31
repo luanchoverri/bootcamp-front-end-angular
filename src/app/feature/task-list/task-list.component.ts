@@ -1,25 +1,26 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
+import { Task } from 'src/app/models/task.model';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })
-export class TaskListComponent {
-  @Input() taskList: any[] = [];
-
+export class TaskListComponent implements OnInit {
+  taskList: Task[] = [];
 
   
+  constructor(private tasksService: TaskService) {}
 
-
-
-  deleteTask(i:number):void {
-    this.taskList.splice(i, 1);
+  ngOnInit() {
+    this.tasksService.tasks$.subscribe((taskList: Task[]) => {
+      this.taskList = taskList;
+    });
+    //console.log(this.taskList);
   }
-
-  checkedTask(i: number, value:boolean) {
-    this.taskList[i].checked = value;
-  }
-
-
 }
+
+
+
+

@@ -1,13 +1,7 @@
 <main>
   <div class="todo-list-content">
-    <section class="add-section">
-      <app-add-task (createTaskEvent)="addTask($event)"></app-add-task>
-    </section>
-
+    <app-add-task></app-add-task>
     <hr>
-
-    <section class="list-section">
-      <app-task-list [taskList]="tasks"> </app-task-list>
-    </section>
+    <app-task-list ></app-task-list>
   </div>
 </main>

@@ -9,13 +9,18 @@
   box-sizing: border-box;
   border-radius: $border-radius;
   
+  // section flotante efecto blur
+  backdrop-filter: blur(10px) ;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 1;
 
     //  Ocupa todo el ancho del componente menos el ancho del botón y un margen de 8px. Su texto debe ser Roboto, 24px.
-    input {
-      flex: 1;
-      text-align: left;
-      align-self: stretch; // Ajusta la altura para ocupar todo el espacio vertical disponible
-      background-color: transparent;
-      @include text-ellipsis;
-    }
+  input[type="text"] {
+    flex: 1;
+    text-align: left;
+    align-self: stretch; // Ajusta la altura para ocupar todo el espacio vertical disponible
+    background-color: transparent;
+    @include text-ellipsis;
+  }
 }

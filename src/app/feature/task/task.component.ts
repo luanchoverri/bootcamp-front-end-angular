@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input , OnChanges, Output, SimpleChanges} from '@angular/core';
+import { Task } from 'src/app/models/task.model';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-task',
@@ -7,32 +9,34 @@ import { Component, EventEmitter, Input , OnChanges, Output, SimpleChanges} from
 })
 
 export class TaskComponent {
-  @Input() task:any ; 
-  @Output() checkedTask = new EventEmitter<boolean>();
-  @Output() optDelete = new EventEmitter<void>();
+  @Input() task!:Task; 
+
+  constructor(private taskService: TaskService){}
+
+ 
 
   share = 'icon-share';
   copy = 'icon-paste' ;
   delete = 'icon-bin';
 
 
-  emitDeleteTask() {
-    this.optDelete.emit();
+  onDeleteTaskButton() {
+    this.taskService.deleteTask(this.task.id);
     // Lógica para borrar la tarea
   }
 
-  copyTask() {
-    // Lógica para copiar la tarea
-  }
+  // copyTask() {
+  //   // Lógica para copiar la tarea
+  // }
 
-  shareTask() {
-    // Lógica para compartir la tarea
-  }
+  // shareTask() {
+  //   // Lógica para compartir la tarea
+  // }
   
-  emitChangeOnCheckbox(){
-    this.task.checked = !this.task.checked;
-    this.checkedTask.emit(this.task.checked);
-  }
+  // emitChangeOnCheckbox(){
+  //   this.task.checked = !this.task.checked;
+  //   this.checkedTask.emit(this.task.checked);
+  // }
 
   
 

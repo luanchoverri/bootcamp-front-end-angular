@@ -7,12 +7,12 @@ import { Component, EventEmitter, Input, Output, HostListener } from '@angular/c
 })
 export class IconButtonComponent {
   @Input() icon: string = "";
-  @Output() buttonEvent = new EventEmitter<boolean>();
+  // @Output() clickedEvent = new EventEmitter<boolean>();
 
   path = "/assets/svg/"
-  executeAction() {
-    this.buttonEvent.emit(true);
-  }
+  // executeAction() {
+  //   this.clickedEvent.emit(true);
+  // }
 
 
 
