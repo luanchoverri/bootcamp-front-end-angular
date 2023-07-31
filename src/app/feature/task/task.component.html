@@ -1,7 +1,7 @@
 <div class="task-item">
     <input type="checkbox"  class="custom-checkbox" >
     <div class="task-text">
-        <ng-content></ng-content> <!-- proyecta el contenido -->
+        {{task.title}}
     </div>
     <div class="task-buttons">
         <app-icon-button [icon]= "copy" ></app-icon-button>
