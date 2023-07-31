@@ -1,0 +1,26 @@
+//mixins
+
+@use '../abstracts/variables-colors-fonts' as var;
+
+@mixin center-flexbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @mixin text-ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  
+  @mixin button-style ($width){
+    height: 3rem;
+    width: $width;
+    border: var.$border-size solid;
+    border-radius: var.$border-radius;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+  }

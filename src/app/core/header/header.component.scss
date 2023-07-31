@@ -1,4 +1,5 @@
-@import '../../styles/styleUtils.scss';
+// @import '../../styles/styleUtils.scss';
+@use '../../abstracts/' as *;
 
   header {
     @include center-flexbox;

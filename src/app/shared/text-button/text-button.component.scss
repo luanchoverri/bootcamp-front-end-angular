@@ -1,5 +1,5 @@
 
-@import '../../styles/styleUtils.scss';
+@use '../../abstracts/' as *;
 .text-button{
     @include button-style(auto);
     padding: 0 1rem;

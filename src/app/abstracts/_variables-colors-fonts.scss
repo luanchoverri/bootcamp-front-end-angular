@@ -1,0 +1,24 @@
+//fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-weight-normal: 400;
+$font-size-base: 1.5rem;   //24px
+$font-size-large: 2.25rem; //36px
+
+//colors
+
+$white: #FFFFFF;                       // $color-white
+$white-50: rgba(255, 255, 255, 0.5);   // $color-white con 50% de opacidad
+$white-20: rgba(255, 255, 255, 0.2);   // $color-white con 20% de opacidad
+
+$black: #000000;                      // $color-black
+$black-50: rgba(34, 34, 34, 0.5);     // $color-black con 50% de opacidad
+$black-10: rgba(34, 34, 34, 0.1);     // $color-black con 20% de opacidad
+
+//grid
+$grid-size: 0.5rem; // 8px div 16 px = 0.5
+
+//borders
+$border-size: 0.0625rem;  // borde 1 por defecto
+$border-radius: 0.25rem; // 4 pixeles borde radio por defecto

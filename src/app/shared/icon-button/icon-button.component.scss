@@ -1,5 +1,4 @@
-@import '../../styles/styleUtils.scss';
-
+@use '../../abstracts/' as *;
 .icon-button {
     
    @include center-flexbox;

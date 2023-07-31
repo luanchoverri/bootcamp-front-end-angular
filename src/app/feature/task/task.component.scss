@@ -1,4 +1,4 @@
-@import "../../styles/styleUtils.scss";
+@use '../../abstracts/' as *;
 
 .task-item {
   @include center-flexbox;

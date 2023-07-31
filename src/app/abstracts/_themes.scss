@@ -1,0 +1,65 @@
+@use "../abstracts/variables-colors-fonts" as *;
+
+@media (prefers-color-scheme: light) {
+  :root {
+    background-color: $white;
+    color: $black;
+
+    button {
+      filter: invert(0);
+    }
+
+    hr {
+      border: 2px solid $black;
+    }
+
+    input {
+      color: $black;
+    }
+
+    .add-task {
+      background-color: $black-10;
+    }
+
+    .custom-checkbox {
+      filter: invert(0);
+    }
+
+    .task-item {
+      background-color: $black-10;
+      color: $black;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: $black;
+    color: $white;
+
+    button {
+      filter: invert(1);
+    }
+
+    hr {
+      border: 2px solid $white-20;
+    }
+
+    input {
+      color: $white;
+    }
+
+    .add-task {
+      background-color: $white-20;
+    }
+
+    .custom-checkbox {
+      filter: invert(1);
+    }
+
+    .task-item {
+      background-color: $white-20;
+      color: $white;
+    }
+  }
+}
