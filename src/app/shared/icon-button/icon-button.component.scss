@@ -4,10 +4,25 @@
    @include center-flexbox;
    @include button-style(3rem);
    padding: 0.5rem;
-
+   
     #icon{
         height: 16px;
         width: 16px;
+    }
+
+    &:hover {
+        border-color: #0056b3; 
+        color: #0056b3;
+        background-color: $white-20;
+    }
+
+    /* Estilo al hacer clic  */
+    &:active {
+        border-color: #0171e7; 
+        color: #036ee0; 
+        background-color: rgba(105, 105, 105, 0.116); 
+        padding: 0.5rem;
+        transition: border-color 0.3s, color 0.3s, background-color 0.2s
     }
 }
   
