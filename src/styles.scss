@@ -2,6 +2,14 @@
 
 @use "app/abstracts/" as *;
 @import "app/abstracts/themes";
+@import '../node_modules/ngx-toastr/toastr.css';
+
+
+.toast-success {
+  background-color: #4CAF50; /* Cambiar el color de fondo para notificaciones de éxito en el componente Tasks */
+  font-size: 16px;
+
+}
 
 :root {
   font-family: $font-family-sans-serif;

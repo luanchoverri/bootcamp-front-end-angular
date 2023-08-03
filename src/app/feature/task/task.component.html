@@ -1,11 +1,11 @@
 <div class="task-item">
     <input type="checkbox"  class="custom-checkbox" >
     <div class="task-text">
-        {{task.title}}
+        <ng-content></ng-content>
     </div>
     <div class="task-buttons">
-        <app-icon-button [icon]= "copy" ></app-icon-button>
-        <app-icon-button [icon]= "share" ></app-icon-button> 
+        <app-icon-button [icon]= "copy" (click)="onCopyTaskButton()"></app-icon-button>
+        <app-icon-button [icon]= "share" (click)="onShareTaskButton()"></app-icon-button> 
         <app-icon-button [icon]= "delete"  (click)="onDeleteTaskButton()" ></app-icon-button>
       
         <!-- botones icon+text y text -->

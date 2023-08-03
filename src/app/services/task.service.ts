@@ -1,27 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Task } from '../models/task.model';
-import { BehaviorSubject } from 'rxjs';
-import { ReactiveFormsModule } from '@angular/forms';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { LocalStorageService } from './local-storage.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class TaskService {
   private tasks: Task[] = [];
-  private tasksSubject  = new BehaviorSubject<Task[]>(this.tasks);
-  private idCounter = 0;
+  private tasksSubject!: BehaviorSubject<Task[]> ;
+  private idCounter!: number;
   
-  constructor() {}
+  constructor(private localStorage: LocalStorageService) {
 
-  tasks$ = this.tasksSubject.asObservable();
+    this.tasks = this._getStoredTasks();
+    this.tasksSubject = new BehaviorSubject<Task[]>(this.tasks);
+    this.idCounter = this._getStoredIdCounter();
+  
+  }
+
+  
 
   public addTask(title: string): void {
     if (title != ""){
       //const id = this.tasks.length; -> implica actualizar el resto de la lsita cuando borras alguna
       this.tasks.unshift(new Task(this.idCounter++, title, ""));
-      this.tasksSubject.next(this.tasks); // Emitir la nueva lista de tareas a los suscriptores
+      this.tasksSubject.next(this.tasks); // Emite la nueva lista de tareas a los suscriptores
+      this._storeTasks();
+      this._storeIdCounter();
     }
-      
     console.log(this.tasks);
 
   }
@@ -34,19 +42,24 @@ export class TaskService {
     const taskFound = this.getTaskById(id);
     if(taskFound){
       taskFound.setChecked(!taskFound.isChecked);
+      this._storeTasks();
     }
   }
 
 
   public deleteTask(id: number): void {
+
     this.tasks = this.tasks.filter((task) => task.id !== id);
+    console.log(this.tasks);
     this.tasksSubject.next(this.tasks);
-    console.log("delete", this.tasks);
+    this._storeTasks();
+
     
   }
 
-  public getAllTasks(): Task[] {
-    return this.tasks
+  public getAllTasks$(): Observable<Task[]> {
+    return this.tasksSubject.asObservable();
+
   }
 
 
@@ -58,6 +71,45 @@ export class TaskService {
     }
     return null;
   }
+
+  private _storeTasks() { 
+    
+    this.localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    console.log(JSON.stringify(this.tasks));
+
+  }
+
+  private _storeIdCounter() {
+    this.localStorage.setItem('idCounter', this.idCounter.toString());
+  }
+
+  private _getStoredIdCounter(): number {
+    const storedIdCounter = this.localStorage.getItem('idCounter');
+    return storedIdCounter !== null ? parseInt(storedIdCounter, 10) : 0;
+  }
+
+  private _getStoredTasks():  Task[] {
+    let storedTasks  = this.localStorage.getItem('tasks');
+    if (storedTasks !== null) {
+      console.log("nos traemos las tareas");
+      const parsedTasks=  JSON.parse(storedTasks);
+
+      if (Array.isArray(parsedTasks)) {
+        return parsedTasks.map(task => new Task(task._id, task._title, task._description));
+      } else {
+        console.error("Los datos almacenados no son un arreglo válido.");
+        return [];
+      }
+    } else {
+      return [];
+    }
+  }
+
+
+
+
+
+
 
 
 }
